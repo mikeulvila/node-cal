@@ -14,7 +14,7 @@ describe('cal', () => {
   });
 
   describe("Zeller's congruence", () => {
-    const zellers = require('../zellers.js');
+    const zellers = require('../lib/zellers.js');
 
     describe('.modifiedMonth', () => {
         it('return 13 for January..', () => {
