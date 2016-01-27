@@ -4,19 +4,15 @@
 
 const generateMonth = require('./lib/month.js');
 
-console.log(generateMonth);
+console.log(generateMonth(1, 2016));
 
-const [,,...args] = process.argv;
-console.log(args);
+//const [,,...args] = process.argv;
 
-if (args.length === 2) {
-  const [month, year] = args;
-  console.log(`month`);
-} else if (args.length === 1) {
-  const [year] = args;
-  console.log(`year`);
-} else {
-  console.log('broke');
-  process.exit(64);
-}
-//console.log(generateMonth(2016, 1);
+//if (args.length === 2) {
+  //const [month, year] = args;
+//} else if (args.length === 1) {
+  //const [year] = args;
+//} else {
+  //process.exit(64);
+//}
+
