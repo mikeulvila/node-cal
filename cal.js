@@ -1,7 +1,8 @@
 #!/usr/bin/env node --harmony_destructuring
 'use strict';
 
-const monthCal = require('./lib/month.js');
+const generateMonth = require('./lib/month.js');
+const generateYear = require('./lib/fullYearCal.js');
 
 //console.log(generateMonth(1, 2016));
 
@@ -15,17 +16,21 @@ if (args.length === 2) {
     // check that year is between 1753 - 9999
     if (year >= 1753 && year <= 9999) {
       //console.log(typeof month);
-      console.log(monthCal.monthToString(month, year));
+      console.log(generateMonth.monthToString(month, year));
     } else {
       console.log('Please pick a year between 1753 and 9999');
     }
+  // run full year cal
 } else if (args.length === 1) {
   const [year] = args.map(num => +num);
+  console.log(generateYear.monthToString(1, year));
+  // run cal with today date
 } else if (args.length === 0) {
   let date = new Date();
   let month = date.getMonth() + 1;
   let year = date.getFullYear();
-  console.log(monthCal.monthToString(month, year));
+  console.log(generateMonth.monthToString(month, year));
+  // fail
 } else {
   process.exit(64);
 }
