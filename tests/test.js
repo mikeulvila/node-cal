@@ -28,12 +28,12 @@ describe('cal', () => {
       expect(output).to.equal(goal);
     });
 
-    //it('should handle a 4 week month', () => {
-      //const goal = execSync('cal 2 2015').toString();
-      //const output = execSync('./cal.js 2 2015').toString();
+    it('should handle a 4 week month', () => {
+      const goal = execSync('cal 2 2015').toString();
+      const output = execSync('./cal.js 2 2015').toString();
 
-      //expect(output).to.equal(goal);
-    //});
+      expect(output).to.equal(goal);
+    });
 
     //it('should handle a 30 day month 11/2015', () => {
       //const goal = execSync('cal 11 2015').toString();
