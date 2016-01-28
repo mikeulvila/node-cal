@@ -35,33 +35,33 @@ describe('cal', () => {
       expect(output).to.equal(goal);
     });
 
-    //it('should handle a 30 day month 11/2015', () => {
-      //const goal = execSync('cal 11 2015').toString();
-      //const output = execSync('./cal.js 11 2015').toString();
+    it('should handle a 30 day month 11/2015', () => {
+      const goal = execSync('cal 11 2015').toString();
+      const output = execSync('./cal.js 11 2015').toString();
 
-      //expect(output).to.equal(goal);
-    //});
+      expect(output).to.equal(goal);
+    });
 
-    //it('should handle a 31 day month 12/2015', () => {
-      //const goal = execSync('cal 12 2015').toString();
-      //const output = execSync('./cal.js 12 2015').toString();
+    it('should handle a 31 day month 12/2015', () => {
+      const goal = execSync('cal 12 2015').toString();
+      const output = execSync('./cal.js 12 2015').toString();
 
-      //expect(output).to.equal(goal);
-    //});
+      expect(output).to.equal(goal);
+    });
 
-    //it('should handle a leap year 2/2012', () => {
-      //const goal = execSync('cal 2 2012').toString();
-      //const output = execSync('./cal.js 2 2012').toString();
+    it('should handle a leap year 2/2012', () => {
+      const goal = execSync('cal 2 2012').toString();
+      const output = execSync('./cal.js 2 2012').toString();
 
-      //expect(output).to.equal(goal);
-    //});
+      expect(output).to.equal(goal);
+    });
 
-    //it('should handle a non leap year 2/2014', () => {
-      //const goal = execSync('cal 2 2014').toString();
-      //const output = execSync('./cal.js 2 2014').toString();
+    it('should handle a non leap year 2/2014', () => {
+      const goal = execSync('cal 2 2014').toString();
+      const output = execSync('./cal.js 2 2014').toString();
 
-      //expect(output).to.equal(goal);
-    //});
+      expect(output).to.equal(goal);
+    });
   });
 
   describe("Zeller's congruence", () => {
