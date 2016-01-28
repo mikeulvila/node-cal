@@ -14,7 +14,8 @@ if (args.length === 2) {
   const [month, year] = args.map(num => +num);
     // check that year is between 1753 - 9999
     if (year >= 1753 && year <= 9999) {
-       console.log(generateMonth(month, year));
+      //console.log(typeof month);
+      console.log(generateMonth(month, year));
     } else {
       console.log('Please pick a year between 1753 and 9999');
     }

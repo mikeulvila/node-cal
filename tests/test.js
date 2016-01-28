@@ -4,13 +4,64 @@ const { expect } = require('chai');
 const { execSync } = require('child_process');
 
 describe('cal', () => {
+
   describe('CLI', () => {
+
     it('should handle the current month', () => {
       const goal = execSync('cal').toString();
       const output = execSync('./cal.js').toString();
 
       expect(output).to.equal(goal);
     });
+
+    it('should handle a 6 week month', () => {
+      const goal = execSync('cal 8 2015').toString();
+      const output = execSync('./cal.js 8 2015').toString();
+
+      expect(output).to.equal(goal);
+    });
+
+    it('should handle a 5 week month', () => {
+      const goal = execSync('cal 10 2015').toString();
+      const output = execSync('./cal.js 10 2015').toString();
+
+      expect(output).to.equal(goal);
+    });
+
+    //it('should handle a 4 week month', () => {
+      //const goal = execSync('cal 2 2015').toString();
+      //const output = execSync('./cal.js 2 2015').toString();
+
+      //expect(output).to.equal(goal);
+    //});
+
+    //it('should handle a 30 day month 11/2015', () => {
+      //const goal = execSync('cal 11 2015').toString();
+      //const output = execSync('./cal.js 11 2015').toString();
+
+      //expect(output).to.equal(goal);
+    //});
+
+    //it('should handle a 31 day month 12/2015', () => {
+      //const goal = execSync('cal 12 2015').toString();
+      //const output = execSync('./cal.js 12 2015').toString();
+
+      //expect(output).to.equal(goal);
+    //});
+
+    //it('should handle a leap year 2/2012', () => {
+      //const goal = execSync('cal 2 2012').toString();
+      //const output = execSync('./cal.js 2 2012').toString();
+
+      //expect(output).to.equal(goal);
+    //});
+
+    //it('should handle a non leap year 2/2014', () => {
+      //const goal = execSync('cal 2 2014').toString();
+      //const output = execSync('./cal.js 2 2014').toString();
+
+      //expect(output).to.equal(goal);
+    //});
   });
 
   describe("Zeller's congruence", () => {
@@ -56,8 +107,8 @@ describe('cal', () => {
       it('returns 0 (Tuesday) for March 2, 2200', () => {
         expect(zellers.getDay(2200, 3, 2)).to.equal(0);
       });
-      it('returns 4 (Tuesday) for March 1, 2300', () => {
-        expect(zellers.getDay(2300, 3, 1)).to.equal(4);
+      it('returns 6 (Saturday) for August 1, 2015', () => {
+        expect(zellers.getDay(2015, 8, 1)).to.equal(6);
       });
     });
   });
