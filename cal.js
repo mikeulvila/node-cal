@@ -23,7 +23,7 @@ if (args.length === 2) {
   // run full year cal
 } else if (args.length === 1) {
   const [year] = args.map(num => +num);
-  console.log(generateYear.monthToString(1, year));
+  console.log(generateYear.getYear(year));
   // run cal with today date
 } else if (args.length === 0) {
   let date = new Date();
