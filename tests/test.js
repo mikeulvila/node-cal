@@ -62,6 +62,12 @@ describe('cal', () => {
 
       expect(output).to.equal(goal);
     });
+    it('should handle a full year', () => {
+      const goal = execSync('cal 2015').toString();
+      const output = execSync('./cal.js 2015').toString();
+
+      expect(output).to.equal(goal);
+    });
   });
 
   describe("Zeller's congruence", () => {
