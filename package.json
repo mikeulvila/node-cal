@@ -12,6 +12,17 @@
     "type": "git",
     "url": "git+https://github.com/mikeulvila/node-cal.git"
   },
+  "eslintConfig": {
+    "env": {
+        "mocha": true,
+        "node": true,
+        "es6": true
+    },
+    "extends": "eslint:recommended",
+    "rules": {
+      "no-console": 0
+    }
+  },
   "author": "Mike Ulvila <mikeulvila@me.com> (https://github.com/mikeulvila)",
   "license": "MIT",
   "bugs": {
